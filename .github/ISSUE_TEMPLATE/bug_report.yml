@@ -53,17 +53,6 @@ body:
     attributes:
       label: 発生頻度
       description: 分数表記 (X/Y)で記載する。
-      options:
-        - 本番環境
-        - 開発環境
-        - ローカル
-    validations:
-      required: true
-  - type: textarea
-    id: frequency
-    attributes:
-      label: 発生頻度
-      description: 分数表記 (X/Y)で記載する。
       placeholder: |-
         <!-- 記載例 -->
         <!-- 再現率100%: 5/5 -->
