@@ -1,7 +1,7 @@
 name: Bug Report
-description: File a bug report
+description: バグの報告
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug"]
 assignees:
   - octocat
 body:
@@ -9,54 +9,65 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
   - type: dropdown
-    id: version
+    id: environment
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: 環境
+      description: バグが発生した環境を選択する。
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - 本番環境
+        - 開発環境
+        - ローカル
     validations:
       required: true
   - type: dropdown
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: ブラウザの種類
       multiple: true
       options:
-        - Firefox
         - Chrome
         - Safari
+        - Firefox
         - Microsoft Edge
+      value:
+        - Chrome
+  - type: markdown
+    id: what-happened
+    attributes:
+      label: バグ詳細
+      description: 何が起こったか？バグ解析に役立つ情報をできるだけ詳しく記載する。
+      placeholder:
+      value: ""
+    validations:
+      required: true
+  - type: markdown
+    id: steps
+    attributes:
+      label: 再現手順
+      description: バグ発見時の発生手順を箇条書きで記載する。手順が不明の場合は未記載とする。判明次第、可能な限り最短手順を記載する
+    validations:
+      required: true
   - type: textarea
-    id: logs
+    id: frequency
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: 発生頻度
+      description: 分数表記 (X/Y)で記載する。
       options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+        - 本番環境
+        - 開発環境
+        - ローカル
+    validations:
+      required: true
+  - type: textarea
+    id: frequency
+    attributes:
+      label: 発生頻度
+      description: 分数表記 (X/Y)で記載する。
+      placeholder: |-
+        <!-- 記載例 -->
+        <!-- 再現率100%: 5/5 -->
+        <!-- 再現率40% : 2/5 -->
+        <!-- 再現率0%  : 0/5 -->
+    validations:
+      required: true
