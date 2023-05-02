@@ -1,0 +1,54 @@
+name: ストーリー
+description: エピックに紐づくストーリーチケットを作成する
+title: "🎸 Story: "
+labels: ["story"]
+assignees:
+  - octocat
+body:
+  - type: input
+    id: story-title
+    attributes:
+      label: ストーリータイトル
+      description: "ストーリーの簡潔で明確なタイトルを提供してください。"
+      placeholder: "例：ユーザーが自分のプロファイル情報を表示できる"
+    validations:
+      required: true
+
+  - type: textarea
+    id: story-description
+    attributes:
+      label: ストーリーの説明
+      description: "ストーリーの目的と詳細について説明してください。ユーザーの視点から具体的な要件を示すことが重要です。"
+      placeholder: "ユーザーは、自分のプロファイルページで名前、メールアドレス、ユーザー名などの情報を表示できるようにする。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 受け入れ基準
+      description: "このストーリーが完了するための受け入れ基準を定義してください。明確で測定可能な基準を設定することで、開発メンバーが期待される結果を理解しやすくなります。"
+      placeholder: |
+        1. プロファイルページで、ユーザーの名前、メールアドレス、ユーザー名が表示される
+        2. プロファイル情報が正確であること
+    validations:
+      required: true
+
+  - type: input
+    id: related-epic
+    attributes:
+      label: 関連するエピック
+      description: "このストーリーチケットが関連するエピックの番号を入力してください。"
+      placeholder: "例：#123"
+      value: "#"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: ノートやその他の情報
+      description: "ストーリーに関連する追加情報、リソース、依存関係などがあれば記載してください。"
+      placeholder: "例：プロファイルページのデザインは、デザインチームが提供するモックアップに従ってください。"
+    validations:
+      required: false
