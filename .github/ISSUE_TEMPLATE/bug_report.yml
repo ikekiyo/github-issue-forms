@@ -1,58 +1,52 @@
-name: Bug Report
-description: バグの報告
-title: "[Bug]: "
+name: 不具合報告
+description: 不具合の報告
+title: "🐛 Bug: "
 labels: ["bug"]
 assignees:
   - octocat
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: dropdown
     id: environment
     attributes:
       label: 環境
-      description: バグが発生した環境を選択する。
+      description: バグが発生した環境を選択する
       options:
-        - 本番環境
-        - 開発環境
         - ローカル
+        - 本番環境
+        - dev環境
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: ブラウザの種類
-      multiple: true
-      options:
-        - Chrome
-        - Safari
-        - Firefox
-        - Microsoft Edge
-      value:
-        - Chrome
-  - type: markdown
+  - type: textarea
     id: what-happened
     attributes:
-      label: バグ詳細
-      description: 何が起こったか？バグ解析に役立つ情報をできるだけ詳しく記載する。
-      placeholder:
-      value: ""
+      label: 現象
+      description: 何が起こったか？バグ解析に役立つ情報をできるだけ詳しく記載する
     validations:
       required: true
-  - type: markdown
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待値
+      description: 期待される動作を記載する
+    validations:
+      required: true
+  - type: textarea
     id: steps
     attributes:
       label: 再現手順
-      description: バグ発見時の発生手順を箇条書きで記載する。手順が不明の場合は未記載とする。判明次第、可能な限り最短手順を記載する
+      description: バグを再現する最短手順を箇条書きで記載する。手順が不明の場合は「不明」と記載し、判明次第可能な限り最短手順を記載する
+      placeholder: |-
+        1. '...'に移動する
+        2. '...'をクリックする
+        3. '...'までスクロールする
+        4. エラーが表示される
     validations:
       required: true
   - type: textarea
     id: frequency
     attributes:
       label: 発生頻度
-      description: 分数表記 (X/Y)で記載する。
+      description: 分数表記 (X/Y)で記載する。再現頻度がバグ解析の重要な手がかりになることがあります。
       placeholder: |-
         <!-- 記載例 -->
         <!-- 再現率100%: 5/5 -->
@@ -60,3 +54,18 @@ body:
         <!-- 再現率0%  : 0/5 -->
     validations:
       required: true
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: 追加情報
+      description: "関連する問題やその他の重要な情報があれば記載してください。"
+      placeholder: |
+        1. 同じ問題が以前のバージョンでも発生していたかどうか
+        2. 問題が特定の状況や条件下でのみ発生するかどうか
+        3. 既知の回避策や修正が適用されているかどうか
+        4. 関連するGitHubのissueや外部リンクがあれば記載
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "もしあればスクリーンショット、ログファイル、動画を添付してください"
