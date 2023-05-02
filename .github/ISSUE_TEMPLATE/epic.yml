@@ -1,0 +1,61 @@
+name: エピック
+description: エピック機能チケットを作成する
+title: "🎸 Epic: "
+labels: ["epic"]
+assignees:
+  - octocat
+body:
+  - type: input
+    id: epic-title
+    attributes:
+      label: エピック名
+      description: "プロジェクトで管理するEpicの名前を入力してください"
+      placeholder: "例：ユーザープロファイル機能"
+    validations:
+      required: false
+
+  - type: textarea
+    id: epic-description
+    attributes:
+      label: エピックの説明
+      description: "エピックの目的と範囲について説明してください"
+      placeholder: "このエピックでは、ユーザーがプロファイル情報を表示、編集、および更新できる機能を実装します"
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: ユーザーストーリー
+      description: "このエピックに関連する主要なユーザーストーリーを記載してください"
+      placeholder: |
+        1. ユーザーは自分のプロファイル情報を表示できる
+        2. ユーザーは自分のプロファイル情報を編集できる
+        3. ユーザーは自分のプロファイル情報を更新できる
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 受け入れ基準
+      description: "このエピックが完了するための受け入れ基準を定義してください"
+      placeholder: |
+        1. プロファイル情報の表示が正確であること
+        2. 編集機能が動作し、ユーザーがプロファイル情報を変更できること
+        3. 更新機能が動作し、変更が正確に保存されること
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: 追加情報
+      description: "関連する問題やその他の重要な情報があれば記載してください"
+      placeholder: "なし"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "関連するリソースや添付ファイルがあれば、ここに追加してください"
