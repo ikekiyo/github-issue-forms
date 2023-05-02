@@ -1,8 +1,14 @@
 # github-issue-forms
 
-GitHub issue forms の使い方とテンプレート
+GitHub issue forms の使い方とテンプレート集
 
 ## 使い方
+
+issue 作成ページから対象の issue 種別を選択する
+
+https://github.com/ikekiyo/github-issue-forms/issues/new/choose
+
+## テンプレートの作成方法
 
 1. .github/ISSUE_TEMPLATE に yaml ファイルを作成する
 2. テンプレートのヘッダーを記載する
