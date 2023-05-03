@@ -1,0 +1,39 @@
+name: リファクタリング
+description: リファクタリング提案チケットを作成する
+labels: ["refactoring"]
+
+body:
+  - type: markdown
+    attributes:
+      value: "リファクタリングチケットを作成していただきありがとうございますコードのリファクタリングを提案し、開発チームと共有するために、以下のフォームに記入してください"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: リファクタリングの説明
+      description: "リファクタリングの目的、背景、および提案する変更について説明してください"
+      placeholder: "Userモデルのバリデーションロジックが複雑で理解しにくくなっているため、リファクタリングを行い、可読性と保守性を向上させる提案する変更は、バリデーションロジックをヘルパーメソッドに分割し、モデル内での役割を明確にすることです"
+    validations:
+      required: true
+
+  - type: textarea
+    id: files
+    attributes:
+      label: 影響範囲
+      description: "影響を及ぼすファイル名やディレクトリ、またはサービスなどをリストしてください"
+      placeholder: |-
+        --- 記載例 ---
+        ・app/models/user.rb
+        ・app/helpers/validation_helper.rb
+      validations:
+        required: true
+
+  - type: textarea
+    id: potential-risks
+    attributes:
+      label: 潜在的なリスク
+      description: |-
+        リファクタリングによって生じる潜在的なリスクや影響を考慮してください
+      placeholder: 既存のXXX機能に影響を与える可能性があるためテストを十分に行う必要がある。また、他の開発者が現在Userモデルに関連する機能を実装中であれば、リファクタリング後にマージのコンフリクトが発生する可能性がある
+    validations:
+      required: false
