@@ -25,8 +25,8 @@ body:
         --- 記載例 ---
         ・app/models/user.rb
         ・app/helpers/validation_helper.rb
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: textarea
     id: potential-risks
