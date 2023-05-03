@@ -3,10 +3,6 @@ description: リファクタリング提案チケットを作成する
 labels: ["refactoring"]
 
 body:
-  - type: markdown
-    attributes:
-      value: "リファクタリングチケットを作成していただきありがとうございますコードのリファクタリングを提案し、開発チームと共有するために、以下のフォームに記入してください"
-
   - type: textarea
     id: description
     attributes:
