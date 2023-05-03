@@ -18,7 +18,6 @@ body:
       label: 影響範囲
       description: 影響を及ぼすファイル名やディレクトリ、またはサービスなどをリストしてください。現時点で影響範囲がわかってない場合はその旨を記載し、リファクタリングを行う前に影響範囲を調査する必要があることを明記してください
       placeholder: |-
-        --- 記載例 ---
         ・app/models/user.rb
         ・app/helpers/validation_helper.rb
     validations:
