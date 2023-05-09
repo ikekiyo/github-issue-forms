@@ -26,3 +26,13 @@ assignees:
    書き方は公式ドキュメントを参照
 
    https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+
+## Github Projects
+### Github Project連携方法
+issueが作成されたときに自動でProjectに紐づける方法
+
+1. Projectの右上にある・・・(view more options)を押下
+2. Workflowsを押下
+3. Default workflowsの「Auto-add to project」を選択
+4. filterに条件を入れる
+5. workflowを有効化する
